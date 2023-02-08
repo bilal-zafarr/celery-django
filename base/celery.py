@@ -14,14 +14,7 @@ app.conf.update(timezone="Asia/Karachi")
 app.config_from_object(settings, namespace="CELERY")
 
 # #celeery beat
-# app.conf.beat_schedule = {
-#     'add-every-30-seconds': {
-
-#         'task': 'tasks.add',
-#         'schedule': 30.0,
-#         'args': (16, 16)
-#     },
-# }
+app.conf.beat_schedule = {}
 
 app.autodiscover_tasks()
 
